@@ -423,9 +423,17 @@
                   >
                     <textarea
                       name=""
+                      x-data="{ 
+                resize () { 
+                    $el.style.height = '0px'; 
+                    $el.style.height = $el.scrollHeight + 'px' 
+                } 
+            }"
+                      x-init="resize()"
+                      @input="resize()"
                       rows="1"
                       id=""
-                      class="flex-1 rounded-xl bg-gray-100 py-3 px-4 text-sm font-medium outline-none"
+                      class="min-h-[30px] flex-1 rounded-xl bg-gray-100 py-3 px-4 text-sm font-medium outline-none"
                       placeholder="Write your message here..."
                     ></textarea>
                     <button
