@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chats | Cardana Fertility</title>
+  </head>
+
+  <body
+    x-data="{ page: 'chats', 'loaded': true, 'darkMode': true, 'stickyMenu': false, 'sidebarToggle': false, 'scrollTop': false }"
+    x-init="
+          darkMode = JSON.parse(localStorage.getItem('darkMode'));
+          $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+    :class="{'dark text-bodydark bg-boxdark-2': darkMode === true}"
+  >
+    <!-- ===== Preloader Start ===== -->
+    <include src="./partials/preloader.html"></include>
+    <!-- ===== Preloader End ===== -->
+
+    <!-- ===== Page Wrapper Start ===== -->
+    <div class="flex h-screen overflow-hidden">
+      <!-- ===== Sidebar Start ===== -->
+      <include src="./partials/sidebar.html"></include>
+      <!-- ===== Sidebar End ===== -->
+
+      <!-- ===== Content Area Start ===== -->
+      <div
+        class="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden"
+      >
+        <!-- ===== Header Start ===== -->
+        <include src="./partials/header.html" />
+        <!-- ===== Header End ===== -->
+
+        <!-- ===== Main Content Start ===== -->
+        <main>
+          <div class="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
+            <div class="w-full">
+              <!-- Breadcrumb Start -->
+              <div
+                class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"
+              >
+                <h2 class="text-title-md2 font-bold text-black dark:text-white">
+                  Chats
+                </h2>
+
+                <nav>
+                  <ol class="flex items-center gap-2">
+                    <li>
+                      <a class="font-medium" href="index.html">Dashboard /</a>
+                    </li>
+
+                    <li class="text-primary">Chats</li>
+                  </ol>
+                </nav>
+              </div>
+              <!-- Breadcrumb End -->
+
+              <!-- ====== Profile Section Start -->
+              <div class="flex flex-col gap-8 xl:flex-row">
+                <div
+                  class="w-full rounded-sm border border-stroke bg-white py-6 shadow-default dark:border-strokedark dark:bg-boxdark xl:col-span-4 xl:w-4/12"
+                >
+                  <div>
+                    <a
+                      href="messages.html"
+                      target="_blank"
+                      class="flex items-center gap-5 px-7.5 py-3 hover:bg-gray-3 dark:hover:bg-meta-4"
+                    >
+                      <div class="relative h-14 w-14 rounded-full">
+                        <img src="./images/user/user-03.png" alt="User" />
+                        <span
+                          class="absolute bottom-0 right-0 h-3.5 w-3.5 rounded-full border-2 border-white bg-meta-3"
+                        ></span>
+                      </div>
+
+                      <div class="flex flex-1 items-center justify-between">
+                        <div>
+                          <h5 class="font-medium text-black dark:text-white">
+                            Devid Heilo
+                          </h5>
+                          <p>
+                            <span
+                              class="text-sm font-medium text-black dark:text-white"
+                              >Hello, how are you?</span
+                            >
+                            <span class="text-xs"> . 12 min</span>
+                          </p>
+                        </div>
+                        <div
+                          class="flex h-6 w-6 items-center justify-center rounded-full bg-primary"
+                        >
+                          <span class="text-sm font-medium text-white">3</span>
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      href="messages.html"
+                      class="flex items-center gap-5 px-7.5 py-3 hover:bg-gray-3 dark:hover:bg-meta-4"
+                    >
+                      <div class="relative h-14 w-14 rounded-full">
+                        <img src="./images/user/user-04.png" alt="User" />
+                        <span
+                          class="absolute bottom-0 right-0 h-3.5 w-3.5 rounded-full border-2 border-white bg-meta-3"
+                        ></span>
+                      </div>
+
+                      <div class="flex flex-1 items-center justify-between">
+                        <div>
+                          <h5 class="font-medium">Henry Fisher</h5>
+                          <p>
+                            <span class="text-sm font-medium"
+                              >I am waiting for you</span
+                            >
+                            <span class="text-xs"> . 5:54 PM</span>
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      href="messages.html"
+                      class="flex items-center gap-5 px-7.5 py-3 hover:bg-gray-3 dark:hover:bg-meta-4"
+                    >
+                      <div class="relative h-14 w-14 rounded-full">
+                        <img src="./images/user/user-05.png" alt="User" />
+                        <span
+                          class="absolute bottom-0 right-0 h-3.5 w-3.5 rounded-full border-2 border-white bg-meta-6"
+                        ></span>
+                      </div>
+
+                      <div class="flex flex-1 items-center justify-between">
+                        <div>
+                          <h5 class="font-medium">Wilium Smith</h5>
+                          <p>
+                            <span class="text-sm font-medium"
+                              >Where are you now?</span
+                            >
+                            <span class="text-xs"> . 10:12 PM</span>
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      href="messages.html"
+                      class="flex items-center gap-5 px-7.5 py-3 hover:bg-gray-3 dark:hover:bg-meta-4"
+                    >
+                      <div class="relative h-14 w-14 rounded-full">
+                        <img src="./images/user/user-01.png" alt="User" />
+                        <span
+                          class="absolute bottom-0 right-0 h-3.5 w-3.5 rounded-full border-2 border-white bg-meta-3"
+                        ></span>
+                      </div>
+
+                      <div class="flex flex-1 items-center justify-between">
+                        <div>
+                          <h5 class="font-medium text-black dark:text-white">
+                            Henry Deco
+                          </h5>
+                          <p>
+                            <span
+                              class="text-sm font-medium text-black dark:text-white"
+                              >Thank you so much!</span
+                            >
+                            <span class="text-xs"> . Sun</span>
+                          </p>
+                        </div>
+                        <div
+                          class="flex h-6 w-6 items-center justify-center rounded-full bg-primary"
+                        >
+                          <span class="text-sm font-medium text-white">2</span>
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      href="messages.html"
+                      class="flex items-center gap-5 px-7.5 py-3 hover:bg-gray-3 dark:hover:bg-meta-4"
+                    >
+                      <div class="relative h-14 w-14 rounded-full">
+                        <img src="./images/user/user-02.png" alt="User" />
+                        <span
+                          class="absolute bottom-0 right-0 h-3.5 w-3.5 rounded-full border-2 border-white bg-meta-7"
+                        ></span>
+                      </div>
+
+                      <div class="flex flex-1 items-center justify-between">
+                        <div>
+                          <h5 class="font-medium">Jubin Jack</h5>
+                          <p>
+                            <span class="text-sm font-medium"
+                              >I really love that!</span
+                            >
+                            <span class="text-xs"> . Oct 23</span>
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      href="messages.html"
+                      class="flex items-center gap-5 px-7.5 py-3 hover:bg-gray-3 dark:hover:bg-meta-4"
+                    >
+                      <div class="relative h-14 w-14 rounded-full">
+                        <img src="./images/user/user-05.png" alt="User" />
+                        <span
+                          class="absolute bottom-0 right-0 h-3.5 w-3.5 rounded-full border-2 border-white bg-meta-6"
+                        ></span>
+                      </div>
+
+                      <div class="flex flex-1 items-center justify-between">
+                        <div>
+                          <h5 class="font-medium">Wilium Smith</h5>
+                          <p>
+                            <span class="text-sm font-medium"
+                              >Where are you now?</span
+                            >
+                            <span class="text-xs"> . Sep 20</span>
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="relative flex w-full flex-col rounded-sm border border-stroke bg-white py-6 shadow-default dark:border-strokedark dark:bg-boxdark xl:col-span-4 xl:w-8/12"
+                >
+                  <div class="flex border-b px-6.5 pb-6.5">
+                    <div class="flex items-center gap-3">
+                      <div class="h-10 w-10 rounded-full">
+                        <img src="./images/user/user-03.png" alt="User" />
+                      </div>
+                      <span class="font-medium">John Doe</span>
+                    </div>
+                  </div>
+                  <div
+                    class="flex h-96 max-h-[550px] flex-1 flex-col-reverse gap-4 overflow-auto border-b p-6.5"
+                  >
+                    <div class="flex w-full items-end gap-2">
+                      <div class="relative h-10 w-10 rounded-full">
+                        <img src="./images/user/user-03.png" alt="User" />
+                      </div>
+                      <p
+                        class="w-fit max-w-sm rounded-2xl rounded-bl-none bg-primary px-4 py-3 text-sm font-medium text-white"
+                      >
+                        Lorem ipsum dolor sit amet.
+                      </p>
+                    </div>
+                    <div class="flex w-full flex-row-reverse items-end gap-2">
+                      <div class="relative h-10 w-10 rounded-full">
+                        <img src="./images/user/user-03.png" alt="User" />
+                      </div>
+                      <p
+                        class="w-fit max-w-sm rounded-2xl rounded-br-none bg-primary px-4 py-3 text-sm font-medium text-white"
+                      >
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Similique iste, voluptatibus incidunt officiis
+                        aspernatur distinctio perspiciatis quod est porro
+                        laudantium quam id sed modi. Et?
+                      </p>
+                    </div>
+                    <div class="flex w-full items-end gap-2">
+                      <div class="relative h-10 w-10 rounded-full">
+                        <img src="./images/user/user-03.png" alt="User" />
+                      </div>
+                      <p
+                        class="w-fit max-w-sm rounded-2xl rounded-bl-none bg-primary px-4 py-3 text-sm font-medium text-white"
+                      >
+                        Lorem ipsum dolor sit amet.
+                      </p>
+                    </div>
+                    <div class="flex w-full flex-row-reverse items-end gap-2">
+                      <div class="relative h-10 w-10 rounded-full">
+                        <img src="./images/user/user-03.png" alt="User" />
+                      </div>
+                      <p
+                        class="w-fit max-w-sm rounded-2xl rounded-br-none bg-primary px-4 py-3 text-sm font-medium text-white"
+                      >
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Similique iste, voluptatibus incidunt officiis
+                        aspernatur distinctio perspiciatis quod est porro
+                        laudantium quam id sed modi. Et?
+                      </p>
+                    </div>
+                    <div class="flex w-full items-end gap-2">
+                      <div class="relative h-10 w-10 rounded-full">
+                        <img src="./images/user/user-03.png" alt="User" />
+                      </div>
+                      <p
+                        class="w-fit max-w-sm rounded-2xl rounded-bl-none bg-primary px-4 py-3 text-sm font-medium text-white"
+                      >
+                        Lorem ipsum dolor sit amet.
+                      </p>
+                    </div>
+                    <div class="flex w-full flex-row-reverse items-end gap-2">
+                      <div class="relative h-10 w-10 rounded-full">
+                        <img src="./images/user/user-03.png" alt="User" />
+                      </div>
+                      <p
+                        class="w-fit max-w-sm rounded-2xl rounded-br-none bg-primary px-4 py-3 text-sm font-medium text-white"
+                      >
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Similique iste, voluptatibus incidunt officiis
+                        aspernatur distinctio perspiciatis quod est porro
+                        laudantium quam id sed modi. Et?
+                      </p>
+                    </div>
+                    <div class="flex w-full items-end gap-2">
+                      <div class="relative h-10 w-10 rounded-full">
+                        <img src="./images/user/user-03.png" alt="User" />
+                      </div>
+                      <p
+                        class="w-fit max-w-sm rounded-2xl rounded-bl-none bg-primary px-4 py-3 text-sm font-medium text-white"
+                      >
+                        Lorem ipsum dolor sit amet.
+                      </p>
+                    </div>
+                    <div class="flex w-full flex-row-reverse items-end gap-2">
+                      <div class="relative h-10 w-10 rounded-full">
+                        <img src="./images/user/user-03.png" alt="User" />
+                      </div>
+                      <p
+                        class="w-fit max-w-sm rounded-2xl rounded-br-none bg-primary px-4 py-3 text-sm font-medium text-white"
+                      >
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Similique iste, voluptatibus incidunt officiis
+                        aspernatur distinctio perspiciatis quod est porro
+                        laudantium quam id sed modi. Et?
+                      </p>
+                    </div>
+                    <div class="flex w-full items-end gap-2">
+                      <div class="relative h-10 w-10 rounded-full">
+                        <img src="./images/user/user-03.png" alt="User" />
+                      </div>
+                      <p
+                        class="w-fit max-w-sm rounded-2xl rounded-bl-none bg-primary px-4 py-3 text-sm font-medium text-white"
+                      >
+                        Lorem ipsum dolor sit amet.
+                      </p>
+                    </div>
+                    <div class="flex w-full flex-row-reverse items-end gap-2">
+                      <div class="relative h-10 w-10 rounded-full">
+                        <img src="./images/user/user-03.png" alt="User" />
+                      </div>
+                      <p
+                        class="w-fit max-w-sm rounded-2xl rounded-br-none bg-primary px-4 py-3 text-sm font-medium text-white"
+                      >
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Similique iste, voluptatibus incidunt officiis
+                        aspernatur distinctio perspiciatis quod est porro
+                        laudantium quam id sed modi. Et?
+                      </p>
+                    </div>
+                    <div class="flex w-full items-end gap-2">
+                      <div class="relative h-10 w-10 rounded-full">
+                        <img src="./images/user/user-03.png" alt="User" />
+                      </div>
+                      <p
+                        class="w-fit max-w-sm rounded-2xl rounded-bl-none bg-primary px-4 py-3 text-sm font-medium text-white"
+                      >
+                        Lorem ipsum dolor sit amet.
+                      </p>
+                    </div>
+                    <div class="flex w-full flex-row-reverse items-end gap-2">
+                      <div class="relative h-10 w-10 rounded-full">
+                        <img src="./images/user/user-03.png" alt="User" />
+                      </div>
+                      <p
+                        class="w-fit max-w-sm rounded-2xl rounded-br-none bg-primary px-4 py-3 text-sm font-medium text-white"
+                      >
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Similique iste, voluptatibus incidunt officiis
+                        aspernatur distinctio perspiciatis quod est porro
+                        laudantium quam id sed modi. Et?
+                      </p>
+                    </div>
+                    <div class="flex w-full items-end gap-2">
+                      <div class="relative h-10 w-10 rounded-full">
+                        <img src="./images/user/user-03.png" alt="User" />
+                      </div>
+                      <p
+                        class="w-fit max-w-sm rounded-2xl rounded-bl-none bg-primary px-4 py-3 text-sm font-medium text-white"
+                      >
+                        Lorem ipsum dolor sit amet.
+                      </p>
+                    </div>
+                    <div class="flex w-full flex-row-reverse items-end gap-2">
+                      <div class="relative h-10 w-10 rounded-full">
+                        <img src="./images/user/user-03.png" alt="User" />
+                      </div>
+                      <p
+                        class="w-fit max-w-sm rounded-2xl rounded-br-none bg-primary px-4 py-3 text-sm font-medium text-white"
+                      >
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Similique iste, voluptatibus incidunt officiis
+                        aspernatur distinctio perspiciatis quod est porro
+                        laudantium quam id sed modi. Et?
+                      </p>
+                    </div>
+                    <div class="flex w-full items-end gap-2">
+                      <div class="relative h-10 w-10 rounded-full">
+                        <img src="./images/user/user-03.png" alt="User" />
+                      </div>
+                      <p
+                        class="w-fit max-w-sm rounded-2xl rounded-bl-none bg-primary px-4 py-3 text-sm font-medium text-white"
+                      >
+                        Lorem ipsum dolor sit amet.
+                      </p>
+                    </div>
+                    <div class="flex w-full flex-row-reverse items-end gap-2">
+                      <div class="relative h-10 w-10 rounded-full">
+                        <img src="./images/user/user-03.png" alt="User" />
+                      </div>
+                      <p
+                        class="w-fit max-w-sm rounded-2xl rounded-br-none bg-primary px-4 py-3 text-sm font-medium text-white"
+                      >
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Similique iste, voluptatibus incidunt officiis
+                        aspernatur distinctio perspiciatis quod est porro
+                        laudantium quam id sed modi. Et?
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center justify-between gap-6 px-6.5 pt-6.5"
+                  >
+                    <textarea
+                      name=""
+                      rows="1"
+                      id=""
+                      class="flex-1 rounded-xl bg-gray-100 py-3 px-4 text-sm font-medium outline-none"
+                      placeholder="Write your message here..."
+                    ></textarea>
+                    <button
+                      type="button"
+                      class="focus:shadow-outline inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 hover:bg-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                    >
+                      Send
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- ====== Profile Section End -->
+            </div>
+          </div>
+        </main>
+        <!-- ===== Main Content End ===== -->
+      </div>
+      <!-- ===== Content Area End ===== -->
+    </div>
+    <!-- ===== Page Wrapper End ===== -->
+  </body>
+</html>
