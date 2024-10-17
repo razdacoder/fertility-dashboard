@@ -1478,6 +1478,10 @@ body{
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+.content-end{
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+}
 .items-start{
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -1578,10 +1582,6 @@ body{
 .divide-neutral-200 > :not([hidden]) ~ :not([hidden]){
   --tw-divide-opacity: 1;
   border-color: rgb(229 229 229 / var(--tw-divide-opacity));
-}
-.self-start{
-  -ms-flex-item-align: start;
-      align-self: flex-start;
 }
 .overflow-auto{
   overflow: auto;
@@ -3236,6 +3236,12 @@ textarea {
 
   .lg\:block{
     display: block;
+  }
+
+  .lg\:flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .lg\:hidden{
