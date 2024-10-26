@@ -2723,10 +2723,10 @@
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              Full Name of Partner
+                              Date of Sample Collection
                             </label>
                             <input
-                              type="text"
+                              type="date"
                               class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
                             />
                           </div>
@@ -2734,53 +2734,21 @@
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              Do you consider yourself to be healthy?
+                              Time of Sample Collection
                             </label>
-                            <div
-                              x-data="{ isOptionSelected: false }"
-                              class="relative z-20 bg-transparent dark:bg-form-input"
-                            >
-                              <select
-                                class="relative z-20 w-full appearance-none rounded border border-stroke bg-transparent px-5 py-3 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
-                                :class="isOptionSelected && 'text-black dark:text-white'"
-                                @change="isOptionSelected = true"
-                              >
-                                <option value="" class="text-body">
-                                  Do you consider yourself to be healthy?
-                                </option>
-                                <option value="" class="text-body">Yes</option>
-                                <option value="" class="text-body">No</option>
-                              </select>
-                              <span
-                                class="absolute right-4 top-1/2 z-30 -translate-y-1/2"
-                              >
-                                <svg
-                                  class="fill-current"
-                                  width="24"
-                                  height="24"
-                                  viewBox="0 0 24 24"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <g opacity="0.8">
-                                    <path
-                                      fill-rule="evenodd"
-                                      clip-rule="evenodd"
-                                      d="M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z"
-                                      fill=""
-                                    ></path>
-                                  </g>
-                                </svg>
-                              </span>
-                            </div>
+                            <input
+                              type="time"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
                           </div>
                         </div>
+
                         <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
                           <div class="w-full xl:w-1/2">
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              Select any Health Family History (1)
+                              Duration of Abstinence
                             </label>
                             <div
                               x-data="{ isOptionSelected: false }"
@@ -2824,7 +2792,7 @@
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              Select any Health Family History (2)
+                              Difficulty in Producing
                             </label>
                             <div
                               x-data="{ isOptionSelected: false }"
@@ -2865,39 +2833,13 @@
                             </div>
                           </div>
                         </div>
+
                         <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
                           <div class="w-full xl:w-1/2">
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              Provide Further Details About Above Chronic
-                              Illness
-                            </label>
-                            <textarea
-                              rows="3"
-                              class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-sm font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-                            ></textarea>
-                          </div>
-                          <div class="w-full xl:w-1/2">
-                            <label
-                              class="mb-3 block text-sm font-medium text-black dark:text-white"
-                            >
-                              Provide Further Details About Above Chronic
-                              Illness
-                            </label>
-                            <textarea
-                              rows="3"
-                              class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-sm font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-                            ></textarea>
-                          </div>
-                        </div>
-                        <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
-                          <div class="w-full xl:w-1/2">
-                            <label
-                              class="mb-3 block text-sm font-medium text-black dark:text-white"
-                            >
-                              Have You Ever Undergone any Fertility Tests or
-                              Treatments?
+                              Was All the Sample Collected
                             </label>
                             <div
                               x-data="{ isOptionSelected: false }"
@@ -2909,8 +2851,7 @@
                                 @change="isOptionSelected = true"
                               >
                                 <option value="" class="text-body">
-                                  Have You Ever Undergone any Fertility Tests or
-                                  Treatments?
+                                  Was All the Sample Collected
                                 </option>
                                 <option value="" class="text-body">Yes</option>
                                 <option value="" class="text-body">No</option>
@@ -2942,7 +2883,7 @@
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              Have You Ever been Diagnosed with any STI?
+                              Time of Production
                             </label>
                             <div
                               x-data="{ isOptionSelected: false }"
@@ -2954,7 +2895,7 @@
                                 @change="isOptionSelected = true"
                               >
                                 <option value="" class="text-body">
-                                  Have You Ever been Diagnosed with any STI?
+                                  Time of Production
                                 </option>
                                 <option value="" class="text-body">Yes</option>
                                 <option value="" class="text-body">No</option>
@@ -2983,37 +2924,68 @@
                             </div>
                           </div>
                         </div>
+
                         <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
                           <div class="w-full xl:w-1/2">
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              If yes above, Please Provide Details
+                              Time of Analysis
                             </label>
-                            <textarea
-                              rows="3"
-                              class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-sm font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-                            ></textarea>
+                            <input
+                              type="time"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
                           </div>
                           <div class="w-full xl:w-1/2">
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              If yes above, Please Provide Details
+                              Volume of Production
                             </label>
-                            <textarea
-                              rows="3"
-                              class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-sm font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-                            ></textarea>
+                            <div
+                              x-data="{ isOptionSelected: false }"
+                              class="relative z-20 bg-transparent dark:bg-form-input"
+                            >
+                              <select
+                                class="relative z-20 w-full appearance-none rounded border border-stroke bg-transparent px-5 py-3 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
+                                :class="isOptionSelected && 'text-black dark:text-white'"
+                                @change="isOptionSelected = true"
+                              >
+                                <option value="" class="text-body">Yes</option>
+                                <option value="" class="text-body">No</option>
+                              </select>
+                              <span
+                                class="absolute right-4 top-1/2 z-30 -translate-y-1/2"
+                              >
+                                <svg
+                                  class="fill-current"
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <g opacity="0.8">
+                                    <path
+                                      fill-rule="evenodd"
+                                      clip-rule="evenodd"
+                                      d="M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z"
+                                      fill=""
+                                    ></path>
+                                  </g>
+                                </svg>
+                              </span>
+                            </div>
                           </div>
                         </div>
+
                         <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
                           <div class="w-full xl:w-1/2">
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              Are You Currently Taking any Medications or
-                              Supplements
+                              Liquefaction
                             </label>
                             <div
                               x-data="{ isOptionSelected: false }"
@@ -3054,8 +3026,7 @@
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              Do You Have any Known Allergies to Medications,
-                              Foods or Environmental Factors
+                              Debris
                             </label>
                             <div
                               x-data="{ isOptionSelected: false }"
@@ -3093,38 +3064,13 @@
                             </div>
                           </div>
                         </div>
+
                         <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
                           <div class="w-full xl:w-1/2">
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              If Yes Above, Please List the Supplements and
-                              Provide Extra Details
-                            </label>
-                            <textarea
-                              rows="3"
-                              class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-sm font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-                            ></textarea>
-                          </div>
-                          <div class="w-full xl:w-1/2">
-                            <label
-                              class="mb-3 block text-sm font-medium text-black dark:text-white"
-                            >
-                              If Yes Above, Please List Items You're Allergic to
-                              and Provide Extra Details
-                            </label>
-                            <textarea
-                              rows="3"
-                              class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-sm font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-                            ></textarea>
-                          </div>
-                        </div>
-                        <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
-                          <div class="w-full xl:w-1/2">
-                            <label
-                              class="mb-3 block text-sm font-medium text-black dark:text-white"
-                            >
-                              Do You Smoke?
+                              Sperm Agglutination
                             </label>
                             <div
                               x-data="{ isOptionSelected: false }"
@@ -3165,8 +3111,7 @@
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              Do you Consume Alcohol either socially or
-                              consistently?
+                              Sperm Concentration
                             </label>
                             <div
                               x-data="{ isOptionSelected: false }"
@@ -3204,39 +3149,129 @@
                             </div>
                           </div>
                         </div>
+
                         <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
                           <div class="w-full xl:w-1/2">
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              If Yes Above Briefly Explain Your Smoking History
+                              Total Count in Ejaculate
                             </label>
-                            <textarea
-                              rows="3"
-                              class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-sm font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-                            ></textarea>
+                            <div
+                              x-data="{ isOptionSelected: false }"
+                              class="relative z-20 bg-transparent dark:bg-form-input"
+                            >
+                              <select
+                                class="relative z-20 w-full appearance-none rounded border border-stroke bg-transparent px-5 py-3 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
+                                :class="isOptionSelected && 'text-black dark:text-white'"
+                                @change="isOptionSelected = true"
+                              >
+                                <option value="" class="text-body">Yes</option>
+                                <option value="" class="text-body">No</option>
+                              </select>
+                              <span
+                                class="absolute right-4 top-1/2 z-30 -translate-y-1/2"
+                              >
+                                <svg
+                                  class="fill-current"
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <g opacity="0.8">
+                                    <path
+                                      fill-rule="evenodd"
+                                      clip-rule="evenodd"
+                                      d="M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z"
+                                      fill=""
+                                    ></path>
+                                  </g>
+                                </svg>
+                              </span>
+                            </div>
                           </div>
                           <div class="w-full xl:w-1/2">
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              If Yes Above Briefly Explain Your
-                              Alcohol-Consumption History, Stating How Much You
-                              Take Per Day
+                              Sperm Motility
                             </label>
-                            <textarea
-                              rows="3"
-                              class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-sm font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-                            ></textarea>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
                           </div>
                         </div>
+
                         <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
-                          <div class="w-full">
+                          <div class="w-full xl:w-1/2">
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              Do You Consume Hard Drugs either socially or
-                              consistently?
+                              Fast Progression
+                            </label>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
+                          </div>
+                          <div class="w-full xl:w-1/2">
+                            <label
+                              class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            >
+                              Slow Progression
+                            </label>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
+                          <div class="w-full xl:w-1/2">
+                            <label
+                              class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            >
+                              Non Progression
+                            </label>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
+                          </div>
+                          <div class="w-full xl:w-1/2">
+                            <label
+                              class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            >
+                              Sperm Immotile
+                            </label>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
+                          <div class="w-full xl:w-1/2">
+                            <label
+                              class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            >
+                              Sperm Immotile
+                            </label>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
+                          </div>
+                          <div class="w-full xl:w-1/2">
+                            <label
+                              class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            >
+                              Other Cells (X10^6/ml)
                             </label>
                             <div
                               x-data="{ isOptionSelected: false }"
@@ -3274,21 +3309,140 @@
                             </div>
                           </div>
                         </div>
+
                         <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
-                          <div class="w-full">
+                          <div class="w-full xl:w-1/2">
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              If Yes Above Briefly Explain Your Drug-Use
-                              History, Stating How Much of Drugs You Take Per
-                              Day
+                              Round Cells
                             </label>
-                            <textarea
-                              rows="3"
-                              class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-sm font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-                            ></textarea>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
+                          </div>
+                          <div class="w-full xl:w-1/2">
+                            <label
+                              class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            >
+                              White Blood Cells
+                            </label>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
                           </div>
                         </div>
+
+                        <h3 class="text-lg font-semibold text-black-2">
+                          Morphology
+                        </h3>
+
+                        <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
+                          <div class="w-full xl:w-1/2">
+                            <label
+                              class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            >
+                              Normal Forms
+                            </label>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
+                          </div>
+                          <div class="w-full xl:w-1/2">
+                            <label
+                              class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            >
+                              Abnormal Forms
+                            </label>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
+                          </div>
+                        </div>
+                        <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
+                          <div class="w-full xl:w-1/2">
+                            <label
+                              class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            >
+                              Head Defects
+                            </label>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
+                          </div>
+                          <div class="w-full xl:w-1/2">
+                            <label
+                              class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            >
+                              Mid-piece Defects
+                            </label>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
+                          <div class="w-full xl:w-1/2">
+                            <label
+                              class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            >
+                              Tail Defects
+                            </label>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
+                          </div>
+                          <div class="w-full xl:w-1/2">
+                            <label
+                              class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            >
+                              Antisperm Antibody
+                            </label>
+                            <div
+                              x-data="{ isOptionSelected: false }"
+                              class="relative z-20 bg-transparent dark:bg-form-input"
+                            >
+                              <select
+                                class="relative z-20 w-full appearance-none rounded border border-stroke bg-transparent px-5 py-3 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
+                                :class="isOptionSelected && 'text-black dark:text-white'"
+                                @change="isOptionSelected = true"
+                              >
+                                <option value="" class="text-body">Yes</option>
+                                <option value="" class="text-body">No</option>
+                              </select>
+                              <span
+                                class="absolute right-4 top-1/2 z-30 -translate-y-1/2"
+                              >
+                                <svg
+                                  class="fill-current"
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <g opacity="0.8">
+                                    <path
+                                      fill-rule="evenodd"
+                                      clip-rule="evenodd"
+                                      d="M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z"
+                                      fill=""
+                                    ></path>
+                                  </g>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+
                         <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
                           <div class="w-full">
                             <label
@@ -3692,10 +3846,10 @@
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              Full Name of Partner
+                              Date of Sample Collection
                             </label>
                             <input
-                              type="text"
+                              type="date"
                               class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
                             />
                           </div>
@@ -3703,53 +3857,21 @@
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              Do you consider yourself to be healthy?
+                              Time of Sample Collection
                             </label>
-                            <div
-                              x-data="{ isOptionSelected: false }"
-                              class="relative z-20 bg-transparent dark:bg-form-input"
-                            >
-                              <select
-                                class="relative z-20 w-full appearance-none rounded border border-stroke bg-transparent px-5 py-3 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
-                                :class="isOptionSelected && 'text-black dark:text-white'"
-                                @change="isOptionSelected = true"
-                              >
-                                <option value="" class="text-body">
-                                  Do you consider yourself to be healthy?
-                                </option>
-                                <option value="" class="text-body">Yes</option>
-                                <option value="" class="text-body">No</option>
-                              </select>
-                              <span
-                                class="absolute right-4 top-1/2 z-30 -translate-y-1/2"
-                              >
-                                <svg
-                                  class="fill-current"
-                                  width="24"
-                                  height="24"
-                                  viewBox="0 0 24 24"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <g opacity="0.8">
-                                    <path
-                                      fill-rule="evenodd"
-                                      clip-rule="evenodd"
-                                      d="M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z"
-                                      fill=""
-                                    ></path>
-                                  </g>
-                                </svg>
-                              </span>
-                            </div>
+                            <input
+                              type="time"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
                           </div>
                         </div>
+
                         <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
                           <div class="w-full xl:w-1/2">
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              Select any Health Family History (1)
+                              Duration of Abstinence
                             </label>
                             <div
                               x-data="{ isOptionSelected: false }"
@@ -3793,7 +3915,7 @@
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              Select any Health Family History (2)
+                              Difficulty in Producing
                             </label>
                             <div
                               x-data="{ isOptionSelected: false }"
@@ -3834,39 +3956,13 @@
                             </div>
                           </div>
                         </div>
+
                         <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
                           <div class="w-full xl:w-1/2">
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              Provide Further Details About Above Chronic
-                              Illness
-                            </label>
-                            <textarea
-                              rows="3"
-                              class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-sm font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-                            ></textarea>
-                          </div>
-                          <div class="w-full xl:w-1/2">
-                            <label
-                              class="mb-3 block text-sm font-medium text-black dark:text-white"
-                            >
-                              Provide Further Details About Above Chronic
-                              Illness
-                            </label>
-                            <textarea
-                              rows="3"
-                              class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-sm font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-                            ></textarea>
-                          </div>
-                        </div>
-                        <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
-                          <div class="w-full xl:w-1/2">
-                            <label
-                              class="mb-3 block text-sm font-medium text-black dark:text-white"
-                            >
-                              Have You Ever Undergone any Fertility Tests or
-                              Treatments?
+                              Was All the Sample Collected
                             </label>
                             <div
                               x-data="{ isOptionSelected: false }"
@@ -3878,8 +3974,7 @@
                                 @change="isOptionSelected = true"
                               >
                                 <option value="" class="text-body">
-                                  Have You Ever Undergone any Fertility Tests or
-                                  Treatments?
+                                  Was All the Sample Collected
                                 </option>
                                 <option value="" class="text-body">Yes</option>
                                 <option value="" class="text-body">No</option>
@@ -3911,7 +4006,7 @@
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              Have You Ever been Diagnosed with any STI?
+                              Time of Production
                             </label>
                             <div
                               x-data="{ isOptionSelected: false }"
@@ -3923,7 +4018,7 @@
                                 @change="isOptionSelected = true"
                               >
                                 <option value="" class="text-body">
-                                  Have You Ever been Diagnosed with any STI?
+                                  Time of Production
                                 </option>
                                 <option value="" class="text-body">Yes</option>
                                 <option value="" class="text-body">No</option>
@@ -3952,37 +4047,68 @@
                             </div>
                           </div>
                         </div>
+
                         <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
                           <div class="w-full xl:w-1/2">
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              If yes above, Please Provide Details
+                              Time of Analysis
                             </label>
-                            <textarea
-                              rows="3"
-                              class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-sm font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-                            ></textarea>
+                            <input
+                              type="time"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
                           </div>
                           <div class="w-full xl:w-1/2">
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              If yes above, Please Provide Details
+                              Volume of Production
                             </label>
-                            <textarea
-                              rows="3"
-                              class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-sm font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-                            ></textarea>
+                            <div
+                              x-data="{ isOptionSelected: false }"
+                              class="relative z-20 bg-transparent dark:bg-form-input"
+                            >
+                              <select
+                                class="relative z-20 w-full appearance-none rounded border border-stroke bg-transparent px-5 py-3 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
+                                :class="isOptionSelected && 'text-black dark:text-white'"
+                                @change="isOptionSelected = true"
+                              >
+                                <option value="" class="text-body">Yes</option>
+                                <option value="" class="text-body">No</option>
+                              </select>
+                              <span
+                                class="absolute right-4 top-1/2 z-30 -translate-y-1/2"
+                              >
+                                <svg
+                                  class="fill-current"
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <g opacity="0.8">
+                                    <path
+                                      fill-rule="evenodd"
+                                      clip-rule="evenodd"
+                                      d="M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z"
+                                      fill=""
+                                    ></path>
+                                  </g>
+                                </svg>
+                              </span>
+                            </div>
                           </div>
                         </div>
+
                         <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
                           <div class="w-full xl:w-1/2">
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              Are You Currently Taking any Medications or
-                              Supplements
+                              Liquefaction
                             </label>
                             <div
                               x-data="{ isOptionSelected: false }"
@@ -4023,8 +4149,7 @@
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              Do You Have any Known Allergies to Medications,
-                              Foods or Environmental Factors
+                              Debris
                             </label>
                             <div
                               x-data="{ isOptionSelected: false }"
@@ -4062,38 +4187,13 @@
                             </div>
                           </div>
                         </div>
+
                         <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
                           <div class="w-full xl:w-1/2">
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              If Yes Above, Please List the Supplements and
-                              Provide Extra Details
-                            </label>
-                            <textarea
-                              rows="3"
-                              class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-sm font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-                            ></textarea>
-                          </div>
-                          <div class="w-full xl:w-1/2">
-                            <label
-                              class="mb-3 block text-sm font-medium text-black dark:text-white"
-                            >
-                              If Yes Above, Please List Items You're Allergic to
-                              and Provide Extra Details
-                            </label>
-                            <textarea
-                              rows="3"
-                              class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-sm font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-                            ></textarea>
-                          </div>
-                        </div>
-                        <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
-                          <div class="w-full xl:w-1/2">
-                            <label
-                              class="mb-3 block text-sm font-medium text-black dark:text-white"
-                            >
-                              Do You Smoke?
+                              Sperm Agglutination
                             </label>
                             <div
                               x-data="{ isOptionSelected: false }"
@@ -4134,8 +4234,7 @@
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              Do you Consume Alcohol either socially or
-                              consistently?
+                              Sperm Concentration
                             </label>
                             <div
                               x-data="{ isOptionSelected: false }"
@@ -4173,39 +4272,129 @@
                             </div>
                           </div>
                         </div>
+
                         <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
                           <div class="w-full xl:w-1/2">
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              If Yes Above Briefly Explain Your Smoking History
+                              Total Count in Ejaculate
                             </label>
-                            <textarea
-                              rows="3"
-                              class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-sm font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-                            ></textarea>
+                            <div
+                              x-data="{ isOptionSelected: false }"
+                              class="relative z-20 bg-transparent dark:bg-form-input"
+                            >
+                              <select
+                                class="relative z-20 w-full appearance-none rounded border border-stroke bg-transparent px-5 py-3 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
+                                :class="isOptionSelected && 'text-black dark:text-white'"
+                                @change="isOptionSelected = true"
+                              >
+                                <option value="" class="text-body">Yes</option>
+                                <option value="" class="text-body">No</option>
+                              </select>
+                              <span
+                                class="absolute right-4 top-1/2 z-30 -translate-y-1/2"
+                              >
+                                <svg
+                                  class="fill-current"
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <g opacity="0.8">
+                                    <path
+                                      fill-rule="evenodd"
+                                      clip-rule="evenodd"
+                                      d="M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z"
+                                      fill=""
+                                    ></path>
+                                  </g>
+                                </svg>
+                              </span>
+                            </div>
                           </div>
                           <div class="w-full xl:w-1/2">
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              If Yes Above Briefly Explain Your
-                              Alcohol-Consumption History, Stating How Much You
-                              Take Per Day
+                              Sperm Motility
                             </label>
-                            <textarea
-                              rows="3"
-                              class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-sm font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-                            ></textarea>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
                           </div>
                         </div>
+
                         <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
-                          <div class="w-full">
+                          <div class="w-full xl:w-1/2">
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              Do You Consume Hard Drugs either socially or
-                              consistently?
+                              Fast Progression
+                            </label>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
+                          </div>
+                          <div class="w-full xl:w-1/2">
+                            <label
+                              class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            >
+                              Slow Progression
+                            </label>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
+                          <div class="w-full xl:w-1/2">
+                            <label
+                              class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            >
+                              Non Progression
+                            </label>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
+                          </div>
+                          <div class="w-full xl:w-1/2">
+                            <label
+                              class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            >
+                              Sperm Immotile
+                            </label>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
+                          <div class="w-full xl:w-1/2">
+                            <label
+                              class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            >
+                              Sperm Immotile
+                            </label>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
+                          </div>
+                          <div class="w-full xl:w-1/2">
+                            <label
+                              class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            >
+                              Other Cells (X10^6/ml)
                             </label>
                             <div
                               x-data="{ isOptionSelected: false }"
@@ -4243,21 +4432,140 @@
                             </div>
                           </div>
                         </div>
+
                         <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
-                          <div class="w-full">
+                          <div class="w-full xl:w-1/2">
                             <label
                               class="mb-3 block text-sm font-medium text-black dark:text-white"
                             >
-                              If Yes Above Briefly Explain Your Drug-Use
-                              History, Stating How Much of Drugs You Take Per
-                              Day
+                              Round Cells
                             </label>
-                            <textarea
-                              rows="3"
-                              class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-sm font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-                            ></textarea>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
+                          </div>
+                          <div class="w-full xl:w-1/2">
+                            <label
+                              class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            >
+                              White Blood Cells
+                            </label>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
                           </div>
                         </div>
+
+                        <h3 class="text-lg font-semibold text-black-2">
+                          Morphology
+                        </h3>
+
+                        <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
+                          <div class="w-full xl:w-1/2">
+                            <label
+                              class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            >
+                              Normal Forms
+                            </label>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
+                          </div>
+                          <div class="w-full xl:w-1/2">
+                            <label
+                              class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            >
+                              Abnormal Forms
+                            </label>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
+                          </div>
+                        </div>
+                        <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
+                          <div class="w-full xl:w-1/2">
+                            <label
+                              class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            >
+                              Head Defects
+                            </label>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
+                          </div>
+                          <div class="w-full xl:w-1/2">
+                            <label
+                              class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            >
+                              Mid-piece Defects
+                            </label>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
+                          <div class="w-full xl:w-1/2">
+                            <label
+                              class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            >
+                              Tail Defects
+                            </label>
+                            <input
+                              type="text"
+                              class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            />
+                          </div>
+                          <div class="w-full xl:w-1/2">
+                            <label
+                              class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            >
+                              Antisperm Antibody
+                            </label>
+                            <div
+                              x-data="{ isOptionSelected: false }"
+                              class="relative z-20 bg-transparent dark:bg-form-input"
+                            >
+                              <select
+                                class="relative z-20 w-full appearance-none rounded border border-stroke bg-transparent px-5 py-3 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
+                                :class="isOptionSelected && 'text-black dark:text-white'"
+                                @change="isOptionSelected = true"
+                              >
+                                <option value="" class="text-body">Yes</option>
+                                <option value="" class="text-body">No</option>
+                              </select>
+                              <span
+                                class="absolute right-4 top-1/2 z-30 -translate-y-1/2"
+                              >
+                                <svg
+                                  class="fill-current"
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <g opacity="0.8">
+                                    <path
+                                      fill-rule="evenodd"
+                                      clip-rule="evenodd"
+                                      d="M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z"
+                                      fill=""
+                                    ></path>
+                                  </g>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+
                         <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
                           <div class="w-full">
                             <label
