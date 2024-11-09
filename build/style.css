@@ -1477,6 +1477,9 @@ body{
 .grid-cols-6{
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
+.grid-cols-8{
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
 .flex-row-reverse{
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
@@ -1584,6 +1587,11 @@ body{
   --tw-space-x-reverse: 0;
   margin-right: calc(0.875rem * var(--tw-space-x-reverse));
   margin-left: calc(0.875rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-y-2 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 .space-y-3 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
