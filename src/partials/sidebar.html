@@ -34,7 +34,7 @@
     class="no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear"
   >
     <!-- Sidebar Menu -->
-    <nav class="px-4 py-4 lg:px-6" x-data="{selected: 'Dashboard'}">
+    <nav class="px-4 py-4 lg:px-6" x-data="{selected: $persist('Dashboard')}">
       <!-- Menu Group -->
       <div>
         <ul class="mb-6 flex flex-col gap-1.5">
