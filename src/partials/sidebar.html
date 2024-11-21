@@ -34,7 +34,7 @@
     class="no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear"
   >
     <!-- Sidebar Menu -->
-    <nav class="px-4 py-4 lg:px-6" x-data="{selected: $persist('Dashboard')}">
+    <nav class="px-4 py-4 lg:px-6" x-data="{selected: $persist('home')}"   x-init="selected = page">
       <!-- Menu Group -->
       <div>
         <ul class="mb-6 flex flex-col gap-1.5">
@@ -43,8 +43,8 @@
             <a
               class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black duration-300 ease-in-out hover:bg-primary hover:text-white"
               href="./../index.html"
-              @click="selected = (selected === 'Dashboard' ? '':'Dashboard')"
-              :class="{ 'bg-primary text-white': (selected === 'Dashboard') && (page === 'home') }"
+              @click="selected = (selected === 'home' ? '':'home')"
+              :class="{ 'bg-primary text-white': (selected === 'home') && (page === 'home') }"
             >
               <svg
                 class="fill-current"
@@ -80,8 +80,8 @@
             <a
               class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black duration-300 ease-in-out hover:bg-primary/90 hover:text-white"
               href="./../users.html"
-              @click="selected = (selected === 'Users' ? '':'Users')"
-              :class="{ 'bg-primary text-white': (selected === 'Users') && (page === 'users') }"
+              @click="selected = (selected === 'users' ? '':'users')"
+              :class="{ 'bg-primary text-white': (selected === 'users') && (page === 'users') }"
             >
               <svg
                 class="fill-current"
@@ -109,8 +109,8 @@
             <a
               class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black duration-300 ease-in-out hover:bg-primary/90 hover:text-white"
               href="./../clinics.html"
-              @click="selected = (selected === 'Clinics' ? '':'Clinics')"
-              :class="{ 'bg-primary text-white': (selected === 'Clinics' ) && (page === 'clinics' || 'clinic-profile') }"
+              @click="selected = (selected === 'clinics' ? '':'clinics')"
+              :class="{ 'bg-primary text-white': (selected === 'clinics' ) && (page === 'clinics')}"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -131,9 +131,9 @@
             <a
               class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black duration-300 ease-in-out hover:bg-primary/90 hover:text-white"
               href="./../professionals.html"
-              @click="selected = (selected === 'Professionals' ? '':'Professionals')"
-              :class="{ 'bg-primary text-white': (selected === 'Professionals') && (page === 'professionals') }"
-              :class="page === 'Professionals' && 'bg-primary'"
+              @click="selected = (selected === 'professionals' ? '':'professionals')"
+              :class="{ 'bg-primary text-white': (selected === 'professionals') && (page === 'professionals') }"
+              :class="page === 'professionals' && 'bg-primary'"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -155,8 +155,8 @@
             <a
               class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black duration-300 ease-in-out hover:bg-primary/90 hover:text-white"
               href="./../donors.html"
-              @click="selected = (selected === 'Donors' ? '':'Donors')"
-              :class="{ 'bg-primary text-white': (selected === 'Donors') || (page === 'donors') }"
+              @click="selected = (selected === 'donors' ? '':'donors')"
+              :class="{ 'bg-primary text-white': (selected === 'donors') || (page === 'donors') }"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -178,8 +178,8 @@
             <a
               class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black duration-300 ease-in-out hover:bg-primary/90 hover:text-white"
               href="./../chats.html"
-              @click="selected = (selected === 'Chats' ? '':'Chats')"
-              :class="{ 'bg-primary text-white': (selected === 'Chats') || (page === 'chats') }"
+              @click="selected = (selected === 'chats' ? '':'chats')"
+              :class="{ 'bg-primary text-white': (selected === 'chats') || (page === 'chats') }"
               
             >
               <svg
@@ -201,9 +201,9 @@
             <a
               class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black duration-300 ease-in-out hover:bg-primary/90 hover:text-white"
               href="./../settings.html"
-              @click="selected = (selected === 'Settings' ? '':'Settings')"
-              :class="{ 'bg-primary text-white': (selected === 'Settings') && (page === 'settings') }"
-              :class="page === 'Settings' && 'bg-primary'"
+              @click="selected = (selected === 'settings' ? '':'settings')"
+              :class="{ 'bg-primary text-white': (selected === 'settings') && (page === 'settings') }"
+              :class="page === 'settings' && 'bg-primary'"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -224,9 +224,9 @@
             <a
               class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black duration-300 ease-in-out hover:bg-primary/90 hover:text-white"
               href="profile.html"
-              @click="selected = (selected === 'Logout' ? '':'Logout')"
-              :class="{ 'bg-primary text-white': (selected === 'Chats') && (page === 'logout') }"
-              :class="page === 'Logout' && 'bg-primary'"
+              @click="selected = (selected === 'logout' ? '':'logout')"
+              :class="{ 'bg-primary text-white': (selected === 'logout') && (page === 'logout') }"
+              :class="page === 'logout' && 'bg-primary'"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
